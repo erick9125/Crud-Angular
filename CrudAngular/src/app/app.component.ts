@@ -23,7 +23,9 @@ export class AppComponent {
   }
 
   deleted(){
+   if(confirm('Estas seguro de eliminar este libro?')){
     this.libreriaArray = this.libreriaArray.filter(x => x != this.selectedLibros);
     this.selectedLibros = new Libreria();
+   }
   }
 }
